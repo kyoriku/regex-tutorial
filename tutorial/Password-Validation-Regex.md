@@ -63,22 +63,22 @@ In this regex, positive lookaheads are used to enforce certain character types i
 - **`(?=.*[A-Z])`**: This positive lookahead asserts that there is at least one uppercase letter (**`[A-Z]`**) present in the password. The **`.*`** preceding the pattern allows any characters (**`.*`** means match zero or more of any character), ensuring that the uppercase letter can appear anywhere in the password.
   > Example: `"Password"` matches because it includes an uppercase letter. However, `"password"` does not match because it lacks an uppercase letter.
 
-  ![uppercaseRegex](../tutorial/images/upperCase.png)
+  ![uppercaseRegex](../tutorial/images/uppercase.png)
   
 - **`(?=.*[a-z])`**: Similarly, this positive lookahead asserts that there is at least one lowercase letter (**`[a-z]`**) present in the password. The **`.*`** preceding the pattern allows any characters, ensuring flexibility in the position of the lowercase letter within the password.
   > Example: `"Password"` matches because it contains a lowercase letter. However, `"PASSWORD"`does not match because it lacks a lowercase letter.
 
-  ![lowercaseRegex](../tutorial/images/lowerCase.png)
+  ![lowercaseRegex](../tutorial/images/lowercase.png)
 
 - **`(?=.*\d)`**: This positive lookahead asserts that there is at least one digit (**`\d`**) present in the password. Again, the **`.*`** preceding the pattern allows any characters, enabling the digit to appear at any position within the password.
   > Example: `"Password123"` matches because it contains a digit. However, `"Password"` does not match because it lacks a digit.
 
-  ![digitRegex](../tutorial/images/digit.png)
+  ![digitRegex](../tutorial/images/digits.png)
 
 - **`(?=.*[@$!%*?&])`**: Finally, this positive lookahead asserts that there is at least one special character (**`[@$!%*?&]`**) present in the password. The **`.*`** preceding the pattern allows any characters, ensuring flexibility in the position of the special character within the password.
   > Example: `"password@$!"` matches because it contains a special character. However, `"Password"` does not match because it lacks a special character.
 
-  ![specCharRegex](../tutorial/images/specChar.png)
+  ![specCharRegex](../tutorial/images/symbols.png)
 
 
 By using positive lookaheads in this manner, the regex ensures that the password contains a diverse set of characters, including uppercase and lowercase letters, digits, and special characters. These assertions contribute to strengthening the password by making it more resistant to brute-force attacks and increasing its complexity.
@@ -99,6 +99,8 @@ In this regex, bracket expressions are utilized to specify the allowed character
   
   > Example: `"PassWord123@$!"` matches because it contains a mix of uppercase letters, lowercase letters, digits, and special characters. However `"weakpassword"` does not match because it lacks an uppercase letter, a digit and a special character.
 
+  ![all-criteria-met](../tutorial/images/all.png)
+
 Bracket expressions offer a concise and efficient way to specify multiple character alternatives within a single position in the regex pattern. They are commonly used in regex patterns for defining character sets, enforcing specific requirements for input data validation, or matching certain types of characters in the input string.
 
 Understanding bracket expressions is essential for crafting regex patterns that accurately match desired character sets and enforce specific criteria for input data validation. They provide flexibility and precision in defining the allowed characters within the pattern, contributing to the effectiveness of regex-based solutions in various applications.
@@ -107,7 +109,10 @@ Understanding bracket expressions is essential for crafting regex patterns that 
 Character classes, also known as bracket expressions, are enclosed in square brackets **`[ ]`** and allow you to specify a set of characters from which the regex engine can match a single character at a given position in the string. They serve a similar purpose to bracket expressions but are often used to match a single character from a predefined set of characters.
 
 In this regex, a character class **`[A-Za-z\d@$!%*?&]`** is used to match any combination of uppercase letters, lowercase letters, digits, and special characters in the password.
-> Example: `"PassWord123@$!"` meets the criteria because it incorporates a combination of uppercase and lowercase letters, digits, and special characters. However, `"password"` fails to meet the requirements as it lacks at least one uppercase letter, one digit, and one special character.
+
+  > Example: `"PassWord123@$!"` meets the criteria because it incorporates a combination of uppercase and lowercase letters, digits, and special characters. However, `"password"` fails to meet the requirements as it lacks at least one uppercase letter, one digit, and one special character.
+
+  ![all-criteria-met](../tutorial/images/all.png)
 
 Understanding character classes is essential for defining specific character sets within a regex pattern, such as matching letters **`[A-Za-z]`**, digits **`\d`**, or predefined special characters **`@$!%*?&`**. They provide a flexible way to define the allowed characters within a pattern, contributing to the versatility and effectiveness of regex-based solutions.
 
@@ -118,7 +123,9 @@ In this regex, the quantifier **`{8,}`** is used to specify the minimum number o
 
 - **`{8,}`**: This quantifier specifies that the preceding element, which in this case is the character class **`[A-Za-z\d@$!%*?&]`**, must occur at least 8 times. The comma **`,`** after the lower bound **`8`** indicates that there is no upper limit to the number of occurrences. Therefore, the password can contain 8 or more characters.
 
-  > Example: `"PassWord123@$!"` matches because it contains at least 8 characters. However `"pswd"` does not match because it does not meet the minimum length requirement of 8 characters.
+  > Example: `"Password"` matches because it contains at least 8 characters. However `"pswd"` does not match because it does not meet the minimum length requirement of 8 characters.
+
+  ![8-character-length](../tutorial/images/8.png)
 
 By using **`{8,}`**, the regex ensures that the password meets a minimum length requirement of 8 characters. This helps enforce a basic level of security by encouraging users to create passwords of adequate length, which can improve resistance against brute-force attacks.
 
