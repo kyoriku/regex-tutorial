@@ -44,12 +44,12 @@ Anchors are special characters that assert positions in the string. They don't m
 - **`^` (caret)**: This anchor asserts the position at the start of the line. In the context of the regex, **`^`** ensures that the regex engine starts matching from the beginning of the string. It essentially anchors the regex pattern to the start of the input string. For password validation, using **`^`** ensures that the entire password must adhere to the specified pattern right from the beginning.
   > Example: `/^hello/` matches the string `"hello world"` because `"hello"` appears at the start of the string, but it won't match `"world hello"` because `"hello"` does not appear at the beginning of the string.
 
-  ![hello](https://github.com/kyoriku/regex-tutorial/assets/145511725/61347357-ba15-4abc-9a79-f2f759bc481b)
+  ![hello](../tutorial/images/hello.png)
 
 - **`$` (dollar sign)**: This anchor asserts the position at the end of the line (or before a line terminator at the end of the string). In the context of the regex, **`$`** ensures that the regex engine matches until the end of the string. It essentially anchors the regex pattern to the end of the input string. For password validation, using **`$`** ensures that the entire password must match the specified pattern until the very end, disallowing any extra characters.
    > Example: `/world$/` matches the string `"hello world"` because `"world"` appears at the end of the string, but it won't match `"world hello"` because `"world`" does not appear at the end of the string.
    
-  ![world](https://github.com/kyoriku/regex-tutorial/assets/145511725/21496417-c0cc-4efd-8883-8c3d0ec1f1af)
+  ![world](../tutorial/images/world.png)
 
 Together, the combination of **`^`** and **`$`** ensures that the entire string (in this case, the password) is evaluated against the regex pattern from start to finish. This anchoring mechanism is crucial for enforcing strict password policies, as it prevents partial matches and requires the entire password to meet the specified criteria for validation.
 
