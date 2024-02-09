@@ -91,7 +91,7 @@ In this regex, bracket expressions are utilized to specify the allowed character
   - **`@$!%*?&`**: Matches any of the specified special characters: **`@`**, **`$`**, **`!`**, **`%`**, **`*`**, **`?`**, or **`&`**.
   <br>
   
-  > Example: `"PassWord123@$!"` matches the pattern due to its a mix of uppercase letters, lowercase letters, digits, and special characters. However `"weakpassword"` does not match as it lacks an uppercase letter, a digit and a special character.
+  > Example: `"PassWord123@$!"` matches the pattern due to its a mix of uppercase letters, lowercase letters, digits, and special characters. However `"password"` does not match as it lacks an uppercase letter, a digit and a special character.
 
   > ![all-criteria-met](../tutorial/images/all.png)
 
