@@ -28,10 +28,10 @@ The tutorial explores the regex components, guiding you through anchors, positiv
 
 - [Anchors](#anchors)
 - [Positive Lookaheads](#positive-lookaheads)
+- [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
 - [Quantifiers](#quantifiers)
 - [Grouping Constructs](#grouping-constructs)
-- [Bracket Expressions](#bracket-expressions)
 - [The OR Operator](#the-or-operator)
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
@@ -58,9 +58,11 @@ In this regex, positive lookaheads are used to enforce certain character types i
 
 - **`(?=.*[A-Z])`**: This positive lookahead asserts that there is at least one uppercase letter (**`[A-Z]`**) present in the password. The **`.*`** preceding the pattern allows any characters (**`.*`** means match zero or more of any character), ensuring that the uppercase letter can appear anywhere in the password.
   > Example: `"PASSWORD"` matches because it includes an uppercase letter. However, `"password"` does not match because it lacks an uppercase letter.
+  ![uppercase](../tutorial/images/upperCaseRegex.png)
   
 - **`(?=.*[a-z])`**: Similarly, this positive lookahead asserts that there is at least one lowercase letter (**`[a-z]`**) present in the password. The **`.*`** preceding the pattern allows any characters, ensuring flexibility in the position of the lowercase letter within the password.
   > Example: `"password"` matches because it contains a lowercase letter. However, `"PASSWORD"`does not match because it lacks a lowercase letter.
+  ![lowercase](../tutorial/images/lowerCaseRegex.png)
 
 - **`(?=.*\d)`**: This positive lookahead asserts that there is at least one digit (**`\d`**) present in the password. Again, the **`.*`** preceding the pattern allows any characters, enabling the digit to appear at any position within the password.
   > Example: `"password123"` matches because it contains a digit. However, `"password"` does not match because it lacks a digit.
@@ -72,10 +74,10 @@ By using positive lookaheads in this manner, the regex ensures that the password
 
 Understanding lookaheads is crucial for crafting precise regex patterns, especially in scenarios where specific conditions must be met without consuming characters in the input string. They provide a powerful mechanism for enforcing complex validation rules while maintaining flexibility and efficiency in regex-based solutions.
 
-### Character Classes
-Character classes, also known as character sets or character ranges, are enclosed in square brackets **`[ ]`** in regex. They allow you to specify a set of characters from which the regex engine can match a single character at that position in the string.
+### Bracket Expressions
+Bracket expressions, often referred to as character classes or character sets, allow you to specify a set of characters from which the regex engine can match a single character at a given position in the string. They are enclosed in square brackets [ ] and provide a concise way to define character alternatives within a single position in the pattern.
 
-In this regex, the character class **`[A-Za-z\d@$!%*?&]`** is used to define the allowed characters for the password:
+In this regex, bracket expressions are utilized to specify the allowed characters for the password:
 
 - **`[A-Za-z\d@$!%*?&]`**: This character class includes a range of characters that the password can contain. Here's a breakdown of the components:
   - **`A-Z`**: Matches any uppercase letter from A to Z.
@@ -86,11 +88,17 @@ In this regex, the character class **`[A-Za-z\d@$!%*?&]`** is used to define the
   
   > Example: `"PassWord123@$!"` matches because it contains a mix of uppercase letters, lowercase letters, digits, and special characters. However `"weakpassword"` does not match because it lacks an uppercase letter, a digit and a special character.
 
-This character class allows for a diverse range of characters in the password, including uppercase letters, lowercase letters, digits, and specific special characters. By including a variety of character types, the password becomes more resistant to brute-force attacks and increases its complexity, thus enhancing security.
+Bracket expressions offer a concise and efficient way to specify multiple character alternatives within a single position in the regex pattern. They are commonly used in regex patterns for defining character sets, enforcing specific requirements for input data validation, or matching certain types of characters in the input string.
 
-Character classes provide a concise and efficient way to specify multiple alternatives within a single character position. They are commonly used in regex patterns for various purposes, such as data validation, text processing, and pattern matching.
+Understanding bracket expressions is essential for crafting regex patterns that accurately match desired character sets and enforce specific criteria for input data validation. They provide flexibility and precision in defining the allowed characters within the pattern, contributing to the effectiveness of regex-based solutions in various applications.
 
-Understanding character classes is essential for crafting regex patterns that accurately match desired character sets and enforce specific requirements for input data validation. They offer flexibility and precision in defining the allowed characters, contributing to the effectiveness of regex-based solutions in a wide range of applications.
+### Character Classes
+Character classes, also known as bracket expressions, are enclosed in square brackets **`[ ]`** and allow you to specify a set of characters from which the regex engine can match a single character at a given position in the string. They serve a similar purpose to bracket expressions but are often used to match a single character from a predefined set of characters.
+
+In this regex, a character class **`[A-Za-z\d@$!%*?&]`** is used to match any combination of uppercase letters, lowercase letters, digits, and special characters in the password.
+> Example: `"PassWord123@$!"` meets the criteria because it incorporates a combination of uppercase and lowercase letters, digits, and special characters. However, `"password"` fails to meet the requirements as it lacks at least one uppercase letter, one digit, and one special character.
+
+Understanding character classes is essential for defining specific character sets within a regex pattern, such as matching letters **`[A-Za-z]`**, digits **`\d`**, or predefined special characters **`@$!%*?&`**. They provide a flexible way to define the allowed characters within a pattern, contributing to the versatility and effectiveness of regex-based solutions.
 
 ### Quantifiers
 Quantifiers are meta-characters in regex that specify the number of instances of the preceding element allowed in a match. They control the repetition of characters, groups, or character classes in the regex pattern.
@@ -108,8 +116,6 @@ Quantifiers provide flexibility in defining the repetition requirements for elem
 Understanding quantifiers is essential for crafting regex patterns that accurately validate input data based on repetition rules, such as minimum and maximum length requirements. They play a crucial role in enforcing password policies, data validation rules, and text processing tasks where repetition patterns need to be defined.
 
 ### Grouping Constructs
-
-### Bracket Expressions
 
 ### The OR Operator
 
