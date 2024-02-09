@@ -56,22 +56,22 @@ Lookaheads are zero-width assertions in regex that check if a certain pattern is
 In this regex, positive lookaheads are used to enforce certain character types in the password, ensuring that it meets specific criteria for strength:
 
 - **`(?=.*[A-Z])`**: This positive lookahead asserts that there is at least one uppercase letter (**`[A-Z]`**) present in the password. The **`.*`** preceding the pattern allows any characters (**`.*`** means match zero or more of any character), ensuring that the uppercase letter can appear anywhere in the password.
-  > Example: `"PASSWORD"` matches because it includes an uppercase letter. However, `"password"` does not match because it lacks an uppercase letter.
+  > Example: `"Password"` matches because it includes an uppercase letter. However, `"password"` does not match because it lacks an uppercase letter.
   
   > ![uppercaseRegex](../tutorial/images/uppercase.png)
   
 - **`(?=.*[a-z])`**: Similarly, this positive lookahead asserts that there is at least one lowercase letter (**`[a-z]`**) present in the password. The **`.*`** preceding the pattern allows any characters, ensuring flexibility in the position of the lowercase letter within the password.
-  > Example: `"password"` matches because it contains a lowercase letter. However, `"PASSWORD"` does not match because it lacks a lowercase letter.
+  > Example: `"Password"` matches because it contains lowercase letters. However, `"PASSWORD"` does not match because it lacks a lowercase letter.
   
   > ![lowercaseRegex](../tutorial/images/lowercase.png)
 
 - **`(?=.*\d)`**: This positive lookahead asserts that there is at least one digit (**`\d`**) present in the password. Again, the **`.*`** preceding the pattern allows any characters, enabling the digit to appear at any position within the password.
-  > Example: `"password123"` matches because it contains a digit. However, `"password"` does not match because it lacks a digit.
+  > Example: `"Password123"` matches because it contains a digit. However, `"Password"` does not match because it lacks a digit.
   
   > ![digitRegex](../tutorial/images/digits.png)
 
 - **`(?=.*[@$!%*?&])`**: Finally, this positive lookahead asserts that there is at least one special character (**`[@$!%*?&]`**) present in the password. The **`.*`** preceding the pattern allows any characters, ensuring flexibility in the position of the special character within the password.
-  > Example: `"password@$!"` matches because it contains a special character. However, `"password"` does not match because it lacks a special character.
+  > Example: `"password@$!"` matches because it contains a special character. However, `"Password"` does not match because it lacks a special character.
 
   > ![specCharRegex](../tutorial/images/symbols.png)
 
@@ -106,7 +106,7 @@ In this regex, the quantifier **`{8,}`** is used to specify the minimum number o
 
 - **`{8,}`**: This quantifier specifies that the preceding element, which in this case is the character class **`[A-Za-z\d@$!%*?&]`**, must occur at least 8 times. The comma **`,`** after the lower bound **`8`** indicates that there is no upper limit to the number of occurrences. Therefore, the password can contain 8 or more characters.
 
-  > Example: `"PassWord123@$!"` matches because it contains at least 8 characters. However `"pswd"` does not match because it does not meet the minimum length requirement of 8 characters.
+  > Example: `"Password"` matches because it contains at least 8 characters. However `"pswd"` does not match because it does not meet the minimum length requirement of 8 characters.
 
   > ![8-character-length](../tutorial/images/8.png)
 
