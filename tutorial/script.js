@@ -1,19 +1,4 @@
-// Example: Lowercase requirement
-var regex = /(?=.*[a-z])/;
-var passwordLowerCase = "password";
-var passwordUpperCase = "PASSWORD";
-
-// Check if password includes a lowercase letter
-console.log(regex.test(passwordLowerCase)); // Output: true
-console.log(regex.test(passwordUpperCase)); // Output: false
-
-// // Check if password includes a lowercase letter
-// console.log(/(?=.*[a-z])/.test(passwordLowercase)); // Output: true
-// console.log(/(?=.*[a-z])/.test(passwordUppercase)); // Output: false
-
-// var passwordDigit = 'password123';
-// var passwordSpec = 'password!@#';
-// var passwordAll = "PassWord123!@#";
+// var passwordAll = "PassWord123@$!";
 // var pswd = "pswd";
 
 // // Check if password includes a digit
@@ -28,12 +13,42 @@ console.log(regex.test(passwordUpperCase)); // Output: false
 // console.log(/.{8,}/.test(passwordAll)); // Output: true
 // console.log(/.{8,}/.test(pswd)); // Output: false
 
-// ----- ----- ----- ----- -----
-// // Example: Uppercase requirement
-// var regex = /(?=.*[A-Z])/;
-// var passwordUpperCase = "PASSWORD";
-// var passwordLowerCase = "password";
+
+// // ----- Uppercase -----
+// var regex = /(?=.*[A-Z])/; // Uppercase requirement
+// var passwordMixedCase = "Password"; // Mixed case password
+// var passwordLowerCase = "password"; // Lowercase password
 
 // // Check if password includes an uppercase letter
-// console.log(regex.test(passwordUpperCase)); // Output: true
+// console.log(regex.test(passwordMixedCase)); // Output: true
 // console.log(regex.test(passwordLowerCase)); // Output: false
+
+
+// // ----- Lowercase -----
+// var regex = /(?=.*[a-z])/; // Lowercase requirement
+// var passwordMixedCase = "Password"; // Mixed case password
+// var passwordUpperCase = "PASSWORD"; // Uppercase password
+
+// // Check if password includes a lowercase letter
+// console.log(regex.test(passwordMixedCase)); // Output: true
+// console.log(regex.test(passwordUpperCase)); // Output: false
+
+
+// // ----- Digit -----
+// var regex = /(?=.*\d)/; // Digit requirement
+// var passwordDigit = "Password123" // Password containing digits
+// var passwordMixedCase = "Password"; // Mixed case password
+
+// // Check if password includes a digt
+// console.log(regex.test(passwordDigit)); // Output: true
+// console.log(regex.test(passwordMixedCase)); // Output: false
+
+
+// // ----- Special Character -----
+// var regex = /(?=.*[@$!%*?&])/ // Special characters requirement
+// var passwordSpecChar = 'password@$!'; // Password containing special characters
+// var passwordMixedCase = "Password"; // Mixed case password
+
+// // Check if password includes a special character
+// console.log(regex.test(passwordSpecChar)); // Output: true
+// console.log(regex.test(passwordMixedCase)); // Output: false
