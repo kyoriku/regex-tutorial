@@ -59,22 +59,22 @@ In this regex, positive lookaheads are used to enforce certain character types i
 - **`(?=.*[A-Z])`**: This positive lookahead asserts that there is at least one uppercase letter (**`[A-Z]`**) present in the password. The **`.*`** preceding the pattern allows any characters (**`.*`** means match zero or more of any character), ensuring that the uppercase letter can appear anywhere in the password.
   > Example: `"Password"` matches because it includes an uppercase letter. However, `"password"` does not match because it lacks an uppercase letter.
 
-  ![uppercaseRegex](../tutorial/images/upperCaseRegex.png)
+  ![uppercaseRegex](../tutorial/images/upperCase.png)
   
 - **`(?=.*[a-z])`**: Similarly, this positive lookahead asserts that there is at least one lowercase letter (**`[a-z]`**) present in the password. The **`.*`** preceding the pattern allows any characters, ensuring flexibility in the position of the lowercase letter within the password.
   > Example: `"Password"` matches because it contains a lowercase letter. However, `"PASSWORD"`does not match because it lacks a lowercase letter.
 
-  ![lowercaseRegex](../tutorial/images/lowerCaseRegex.png)
+  ![lowercaseRegex](../tutorial/images/lowerCase.png)
 
 - **`(?=.*\d)`**: This positive lookahead asserts that there is at least one digit (**`\d`**) present in the password. Again, the **`.*`** preceding the pattern allows any characters, enabling the digit to appear at any position within the password.
   > Example: `"Password123"` matches because it contains a digit. However, `"Password"` does not match because it lacks a digit.
 
-  ![digitRegex](../tutorial/images/digitRegex.png)
+  ![digitRegex](../tutorial/images/digit.png)
 
 - **`(?=.*[@$!%*?&])`**: Finally, this positive lookahead asserts that there is at least one special character (**`[@$!%*?&]`**) present in the password. The **`.*`** preceding the pattern allows any characters, ensuring flexibility in the position of the special character within the password.
   > Example: `"password@$!"` matches because it contains a special character. However, `"Password"` does not match because it lacks a special character.
 
-  ![specCharRegex](../tutorial/images/specCharRegex.png)
+  ![specCharRegex](../tutorial/images/specChar.png)
 
 
 By using positive lookaheads in this manner, the regex ensures that the password contains a diverse set of characters, including uppercase and lowercase letters, digits, and special characters. These assertions contribute to strengthening the password by making it more resistant to brute-force attacks and increasing its complexity.

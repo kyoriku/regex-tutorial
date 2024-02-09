@@ -1,3 +1,5 @@
+
+
 // var passwordAll = "PassWord123@$!";
 // var pswd = "pswd";
 
@@ -14,7 +16,27 @@
 // console.log(/.{8,}/.test(pswd)); // Output: false
 
 
-// // ----- Uppercase -----
+// ----- ^ -----
+// var regex = /^hello/; // Regex to match strings starting with "hello"
+// var stringHello = "hello world"; // String starting with "hello"
+// var stringWorld = "world hello"; // String not starting with "hello"
+
+// // Check if each string starts with "hello"
+// console.log(regex.test(stringHello)); // Output: true
+// console.log(regex.test(stringWorld)); // Output: false
+
+
+// ----- $ -----
+// var regex = /world$/; // Regex to match strings ending with "world"
+// var stringHello = "hello world"; // String ending with "world"
+// var stringWorld = "world hello"; // String not ending with "world"
+
+// // Check if each string ends with "world"
+// console.log(regex.test(stringHello)); // Output: true
+// console.log(regex.test(stringWorld)); // Output: false
+
+
+// // ----- (?=.*[A-Z]) -----
 // var regex = /(?=.*[A-Z])/; // Uppercase requirement
 // var passwordMixedCase = "Password"; // Mixed case password
 // var passwordLowerCase = "password"; // Lowercase password
@@ -24,7 +46,7 @@
 // console.log(regex.test(passwordLowerCase)); // Output: false
 
 
-// // ----- Lowercase -----
+// // ----- (?=.*[a-z]) -----
 // var regex = /(?=.*[a-z])/; // Lowercase requirement
 // var passwordMixedCase = "Password"; // Mixed case password
 // var passwordUpperCase = "PASSWORD"; // Uppercase password
@@ -34,7 +56,7 @@
 // console.log(regex.test(passwordUpperCase)); // Output: false
 
 
-// // ----- Digit -----
+// // ----- (?=.*\d) -----
 // var regex = /(?=.*\d)/; // Digit requirement
 // var passwordDigit = "Password123" // Password containing digits
 // var passwordMixedCase = "Password"; // Mixed case password
@@ -44,7 +66,7 @@
 // console.log(regex.test(passwordMixedCase)); // Output: false
 
 
-// // ----- Special Character -----
+// // ----- (?=.*[@$!%*?&]) -----
 // var regex = /(?=.*[@$!%*?&])/ // Special characters requirement
 // var passwordSpecChar = 'password@$!'; // Password containing special characters
 // var passwordMixedCase = "Password"; // Mixed case password
