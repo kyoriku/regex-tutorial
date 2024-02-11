@@ -25,7 +25,7 @@ To access and use the Regex Tutorial:
 ## Usage
 The Regex Tutorial provides detailed explanations and examples of the following regex components:
 
-1. **Anchors**: Explanation of special characters that assert positions in the string, such as ^ (caret) and $ (dollar sign).
+1. **Anchors**: Explanation of special characters that assert positions in the string, such as **`^`** (caret) and **`$`** (dollar sign).
 2. **Positive Lookaheads**: Introduction to zero-width assertions in regex that check if a certain pattern is followed by another pattern, without consuming any characters in the string.
 3. **Character Classes**: Exploration of character classes or character sets, which allow specifying a set of characters from which the regex engine can match a single character at a given position in the string.
 4. **Quantifiers**: Discussion on meta-characters in regex that specify the number of instances of the preceding element allowed in a match, controlling the repetition of characters, groups, or character classes in the regex pattern.
