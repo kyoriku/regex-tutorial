@@ -21,7 +21,7 @@ To install and use the Regex Tutorial:
 
 1. Clone or download the repository to your local machine.
 2. Open the `Password-Validation-Regex.md` file to begin reading the tutorial content.
-3. Explore the `script.js` file to see practical implementations of the regex pattern for password validation using JavaScript.
+3. Explore the `script.js` file to see examples of the regex pattern using JavaScript.
 
 ## Usage
 The Regex Tutorial provides detailed explanations and examples of the following regex components:
