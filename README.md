@@ -8,12 +8,15 @@ In today's digital landscape, where data breaches and cyber threats are rampant,
 This Regex Tutorial provides a comprehensive guide to understanding and utilizing regular expressions (regex) for validating password strength. This tutorial is designed for developers and individuals interested in cybersecurity who want to enhance their understanding of password validation mechanisms using regex patterns.
 
 ## Table of Contents
+- [Deployment](#deployment)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Deployment](#deployment)
 - [License](#license)
 - [Contributing](#contributing)
 - [Questions](#questions)
+
+## Deployment
+Regex Tutorial: Password Strength Validation is deployed on GitHub Gist. You can access the tutorial [here](https://gist.github.com/kyoriku/8de6b47a9785e740a09d9a276aa4cd14).
 
 ## Installation
 To access and use the Regex Tutorial:
@@ -31,9 +34,6 @@ The Regex Tutorial provides detailed explanations and examples of the following 
 4. **Quantifiers**: Discussion on meta-characters in regex that specify the number of instances of the preceding element allowed in a match, controlling the repetition of characters, groups, or character classes in the regex pattern.
 
 Readers can follow the tutorial to gain a comprehensive understanding of these components and how they contribute to enforcing strong password validation.
-
-## Deployment
-The Regex Tutorial: Password Strength Validation is deployed on GitHub Gist. You can access the tutorial [here](https://gist.github.com/kyoriku/8de6b47a9785e740a09d9a276aa4cd14).
 
 ## License
 This application is covered by the [MIT](https://opensource.org/licenses/MIT) license.
