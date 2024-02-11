@@ -17,7 +17,7 @@ This Regex Tutorial provides a comprehensive guide to understanding and utilizin
 Regex Tutorial: Password Strength Validation is deployed on GitHub Gist. You can access the tutorial [here](https://gist.github.com/kyoriku/8de6b47a9785e740a09d9a276aa4cd14).
 
 ## Installation
-To access and use the Regex Tutorial:
+To install and use the Regex Tutorial:
 
 1. Clone or download the repository to your local machine.
 2. Open the `Password-Validation-Regex.md` file to begin reading the tutorial content.
