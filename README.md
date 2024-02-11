@@ -19,16 +19,16 @@ This Regex Tutorial provides a comprehensive guide to understanding and utilizin
 To access and use the Regex Tutorial:
 
 1. Clone or download the repository to your local machine.
-2. Open the Password-Validation-Regex.md file to begin reading the tutorial content.
-3. Explore the script.js to see practical implementations of the regex pattern for password validation using JavaScript.
+2. Open the `Password-Validation-Regex.md` file to begin reading the tutorial content.
+3. Explore the `script.js` file to see practical implementations of the regex pattern for password validation using JavaScript.
 
 ## Usage
 The Regex Tutorial provides detailed explanations and examples of the following regex components:
 
-1. Anchors: Explanation of special characters that assert positions in the string, such as ^ (caret) and $ (dollar sign).
-2. Positive Lookaheads: Introduction to zero-width assertions in regex that check if a certain pattern is followed by another pattern, without consuming any characters in the string.
-3. Bracket Expressions (Character Classes): Exploration of character classes or character sets, which allow specifying a set of characters from which the regex engine can match a single character at a given position in the string.
-4. Quantifiers: Discussion on meta-characters in regex that specify the number of instances of the preceding element allowed in a match, controlling the repetition of characters, groups, or character classes in the regex pattern.
+1. **Anchors**: Explanation of special characters that assert positions in the string, such as ^ (caret) and $ (dollar sign).
+2. **Positive Lookaheads**: Introduction to zero-width assertions in regex that check if a certain pattern is followed by another pattern, without consuming any characters in the string.
+3. **Character Classes**: Exploration of character classes or character sets, which allow specifying a set of characters from which the regex engine can match a single character at a given position in the string.
+4. **Quantifiers**: Discussion on meta-characters in regex that specify the number of instances of the preceding element allowed in a match, controlling the repetition of characters, groups, or character classes in the regex pattern.
 
 Readers can follow the tutorial to gain a comprehensive understanding of these components and how they contribute to enforcing strong password validation.
 

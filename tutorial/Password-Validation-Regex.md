@@ -22,13 +22,13 @@ This regex focuses on validating strong passwords by enforcing specific criteria
 - **`[A-Za-z\d@$!%*?&]`**: Matches any combination of uppercase letters, lowercase letters, digits, and special characters.
 - **`{8,}`**: Ensures the length of the matched string is at least 8 characters.
 
-The tutorial explores the regex components, guiding you through anchors, positive lookaheads, bracket expressions/character classes, and quantifiers.
+The tutorial explores the regex components, guiding you through anchors, positive lookaheads, character classes, and quantifiers.
 
 ## Table of Contents
 
 - [Anchors](#anchors)
 - [Positive Lookaheads](#positive-lookaheads)
-- [Bracket Expressions](#bracket-expressions-character-classes)
+- [Character Classes](#character-classes)
 - [Quantifiers](#quantifiers)
 
 ## Regex Components
@@ -87,10 +87,10 @@ By using positive lookaheads in this manner, the regex ensures that the password
 
 Understanding lookaheads is crucial for crafting precise regex patterns, especially in scenarios where specific conditions must be met without consuming characters in the input string. They provide a powerful mechanism for enforcing complex validation rules while maintaining flexibility and efficiency in regex-based solutions.
 
-### Bracket Expressions (Character Classes)
-Bracket expressions, often referred to as character classes or character sets, allow you to specify a set of characters from which the regex engine can match a single character at a given position in the string. They are enclosed in square brackets **`[ ]`** and provide a concise way to define character alternatives within a single position in the pattern.
+### Character Classes
+Character classes, also known as character sets or character ranges, are enclosed in square brackets **`[ ]`** in regex. They allow you to specify a set of characters from which the regex engine can match a single character at that position in the string. They serve a similar purpose to bracket expressions but are often used to match a single character from a predefined set of characters.
 
-In this regex, bracket expressions are utilized to specify the allowed characters for the password:
+In this regex, the character class **`[A-Za-z\d@$!%*?&]`** is used to define the allowed characters for the password:
 
 - **`[A-Za-z\d@$!%*?&]`**: This character class includes a range of characters that the password can contain. Here's a breakdown of the components:
   - **`A-Z`**: Matches any uppercase letter from A to Z.
@@ -103,9 +103,9 @@ In this regex, bracket expressions are utilized to specify the allowed character
 
   > ![all-criteria-met](../tutorial/images/all.png)
 
-Bracket expressions (or character classes) offer an efficient means to specify multiple character alternatives within a single position in the regex pattern. They are commonly employed in regex patterns to define character sets, enforce specific input data validation criteria, or match particular character types in the input string.
+Character classes provide a concise and efficient way to specify multiple alternatives within a single character position. They are commonly used in regex patterns for various purposes, such as data validation, text processing, and pattern matching.
 
-Understanding bracket expressions is paramount in crafting regex patterns that precisely match desired character sets and enforce specific validation criteria. They provide the necessary flexibility and precision in defining allowed characters within the pattern, thereby enhancing the effectiveness of regex-based solutions across diverse applications.
+Understanding character classes is essential for defining specific character sets within a regex pattern, such as matching letters **`[A-Za-z]`**, digits **`\d`**, or predefined special characters **`@$!%*?&`**. They provide a flexible way to define the allowed characters within a pattern, contributing to the versatility and effectiveness of regex-based solutions.
 
 ### Quantifiers
 Quantifiers are meta-characters in regex that specify the number of instances of the preceding element allowed in a match. They control the repetition of characters, groups, or character classes in the regex pattern.
@@ -127,13 +127,9 @@ Understanding quantifiers is essential for crafting regex patterns that accurate
 ## Conclusion
 In conclusion, mastering the use of regular expressions (regex) for validating password strength is an essential skill for developers and organizations aiming to enhance data security in today's digital landscape. Through the exploration of a comprehensive regex pattern, this tutorial has provided insights into the fundamental components and techniques involved in crafting robust password validation mechanisms.
 
-The regex pattern dissected in this tutorial focuses on enforcing specific criteria for strong passwords, including a mix of uppercase letters, lowercase letters, digits, and special characters, with a minimum length requirement. By employing anchors, positive lookaheads, bracket expressions/character classes, and quantifiers, the regex ensures that passwords adhere to stringent security standards, thus mitigating the risk of unauthorized access and bolstering the protection of user accounts.
+The regex pattern dissected in this tutorial focuses on enforcing specific criteria for strong passwords, including a mix of uppercase letters, lowercase letters, digits, and special characters, with a minimum length requirement. By employing anchors, positive lookaheads, character classes, and quantifiers, the regex ensures that passwords adhere to stringent security standards, thus mitigating the risk of unauthorized access and bolstering the protection of user accounts.
 
-Understanding the intricacies of regex components, such as anchors for precise string positioning, positive lookaheads for conditional matching, bracket expressions/character classes for defining allowed character sets, and quantifiers for specifying repetition requirements, enables developers to implement effective password validation strategies tailored to their application requirements.
-
-As developers continue to navigate the evolving landscape of cybersecurity threats, proficiency in regex for password validation remains a valuable skillset. By leveraging the knowledge gained from this tutorial, developers can contribute to the creation of more secure digital environments, safeguarding user data against potential breaches and ensuring trust in the integrity of online platforms and services.
-
-Incorporating regex-based password validation mechanisms not only enhances data security but also fosters user confidence and trust, ultimately contributing to a safer and more resilient digital ecosystem.
+Understanding the intricacies of regex components enables developers to implement effective password validation strategies tailored to their application requirements.
 
 For further exploration and practice, interested readers are encouraged to visit the GitHub repository linked below, where examples are available to deepen their understanding of regex and its applications in cybersecurity and beyond.
 

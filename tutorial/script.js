@@ -56,7 +56,7 @@ console.log(regex.test(passwordSpecChar)); // Output: true
 console.log(regex.test(passwordMixedCase)); // Output: false
 
 
-// ---------- Bracket Expressions (Character Classes) ----------
+// ---------- Character Classes ----------
 // [A-Za-z\d@$!%*?&]
 var regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 var passwordAll = "PassWord123@$!"; // Password with all criteria met
