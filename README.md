@@ -3,8 +3,6 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-In today's digital landscape, where data breaches and cyber threats are rampant, ensuring the security of user accounts is paramount. One crucial aspect of data security is enforcing robust password policies that prevent unauthorized access to sensitive information. Regular expressions, often abbreviated as regex, serve as powerful tools for validating password strength by defining specific patterns that passwords must adhere to.
-
 This Regex Tutorial provides a comprehensive guide to understanding and utilizing regular expressions (regex) for validating password strength. This tutorial is designed for developers and individuals interested in cybersecurity who want to enhance their understanding of password validation mechanisms using regex patterns.
 
 ## Table of Contents
